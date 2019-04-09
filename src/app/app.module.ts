@@ -1,26 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { HighlightDirective } from './highlight.directive';
-import { ShowMoviesDirective } from './show-movies.directive';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent,
-    UserProfileComponent,
-    HighlightDirective,
-    ShowMoviesDirective
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
